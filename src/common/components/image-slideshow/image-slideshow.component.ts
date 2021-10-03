@@ -17,8 +17,6 @@ export class ImageSlideshowComponent {
   private sizes = ['extralarge', 'large', 'medium', 'small'];
   fullScreenMode = false;
 
-  constructor() {}
-
   getBiggerImage(item: IImageSlideshow, sizes: string[] = this.sizes): string {
     return getBiggerImage(item, sizes);
   }
