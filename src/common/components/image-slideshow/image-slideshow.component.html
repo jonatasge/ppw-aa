@@ -1,0 +1,47 @@
+<div class="slideshow">
+  <div
+    *ngFor="let item of images; let i = index"
+    [ngClass]="{ active: i === showImage, 'full-screen': fullScreenMode }"
+    [style.height]="height"
+    class="container"
+  >
+    <div
+      (click)="fullScreenMode = !fullScreenMode"
+      [style.backgroundColor]="imageBackgroundColor"
+      [style.height]="height"
+      class="wrap-image"
+    >
+      <div
+        [style.backgroundColor]="handleThumbnailBackgroundColor(primaryColor)"
+        [style.height]="height"
+        class="background"
+      >
+        <div
+          [style.backgroundImage]="'url(' + getBiggerImage(item) + ')'"
+          [style.height]="height"
+          class="image"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div
+  *ngIf="showThumbnails"
+   class="wrap-thumbnails">
+    <div
+      *ngFor="let item of images || []; let i = index"
+      (click)="showImage = i"
+      [ngClass]="{ active: i === showImage }"
+      [style.borderColor]="primaryColor"
+      [style.backgroundColor]="handleThumbnailBackgroundColor(primaryColor)"
+      class="thumbnail"
+    >
+      <img [src]="getSmallerImage(item)" />
+      <span
+        *ngIf="i === showImage"
+        [style.borderBottomColor]="primaryColor"
+        class="arrow"
+      ></span>
+    </div>
+  </div>
+</div>
