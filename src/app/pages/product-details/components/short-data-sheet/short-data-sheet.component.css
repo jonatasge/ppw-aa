@@ -1,102 +1,103 @@
-@import "../../../../styles/theme.css";
- .short-data-sheet {
-	 align-items: stretch;
-	 display: flex;
-	 flex-wrap: wrap;
-	 justify-content: space-between;
+.short-data-sheet {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
- @media (max-width: 1023px) {
-	 .short-data-sheet .picture, .short-data-sheet .container {
-		 width: 100% !important;
-	}
+@media (max-width: 1023px) {
+  .short-data-sheet .picture,
+  .short-data-sheet .container {
+    width: 100% !important;
+  }
 }
- .short-data-sheet .picture {
-	 background-position: center;
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 border-radius: 25px;
-	 width: 400px;
+.short-data-sheet .picture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  width: 400px;
 }
- .short-data-sheet .container {
-	 width: calc(100% - 420px);
+.short-data-sheet .container {
+  width: calc(100% - 420px);
 }
- .short-data-sheet .container .name {
-	 font-weight: 100;
-	 font-size: 22px;
+.short-data-sheet .container .name {
+  font-weight: 100;
+  font-size: 22px;
 }
- @media (max-width: 1023px) {
-	 .short-data-sheet .container .name {
-		 font-size: 18px;
-		 text-align: center;
-	}
+@media (max-width: 1023px) {
+  .short-data-sheet .container .name {
+    font-size: 18px;
+    text-align: center;
+  }
 }
- .short-data-sheet .container .wrap-chips {
-	 display: flex;
-	 flex-wrap: wrap;
-	 margin: -7px;
+.short-data-sheet .container .wrap-chips {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -7px;
 }
- @media (max-width: 1023px) {
-	 .short-data-sheet .container .wrap-chips {
-		 justify-content: center;
-	}
+@media (max-width: 1023px) {
+  .short-data-sheet .container .wrap-chips {
+    justify-content: center;
+  }
 }
- .short-data-sheet .container .wrap-chips .chip {
-	 align-items: center;
-	 background-color: #f0f0f0;
-	 border-radius: 25px;
-	 cursor: pointer;
-	 display: flex;
-	 font-size: 14px;
-	 font-weight: 100;
-	 line-height: 24px;
-	 margin: 7px;
-	 padding: 2px 12px;
-	 transition: all ease 0.5s;
+.short-data-sheet .container .wrap-chips .chip {
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 24px;
+  margin: 7px;
+  padding: 2px 12px;
+  transition: all ease 0.5s;
 }
- .short-data-sheet .container .wrap-chips .chip .evino-icons, .short-data-sheet .container .wrap-chips .chip .icon {
-	 height: 20px;
-	 margin-right: 3px;
-	 width: 20px;
+.short-data-sheet .container .wrap-chips .chip .evino-icons,
+.short-data-sheet .container .wrap-chips .chip .icon {
+  height: 20px;
+  margin-right: 3px;
+  width: 20px;
 }
- .short-data-sheet .container .wrap-chips .chip .evino-icons {
-	 height: 18px;
-	 font-size: 18px;
-	 width: 18px;
+.short-data-sheet .container .wrap-chips .chip .evino-icons {
+  height: 18px;
+  font-size: 18px;
+  width: 18px;
 }
- .short-data-sheet .container .wrap-infos {
-	 align-items: stretch;
-	 display: flex;
-	 flex-wrap: wrap;
-	 justify-content: space-between;
-	 margin: 24px -10px 0;
+.short-data-sheet .container .wrap-infos {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 24px -10px 0;
 }
- .short-data-sheet .container .wrap-infos .info {
-	 display: flex;
-	 padding: 10px;
-	 width: 33%;
+.short-data-sheet .container .wrap-infos .info {
+  display: flex;
+  padding: 10px;
+  width: 33%;
 }
- @media (max-width: 599px) {
-	 .short-data-sheet .container .wrap-infos .info {
-		 width: 100%;
-	}
+@media (max-width: 599px) {
+  .short-data-sheet .container .wrap-infos .info {
+    width: 100%;
+  }
 }
- .short-data-sheet .container .wrap-infos .info .evino-icons {
-	 color: var(--primary);
-	 font-size: 24px;
-	 margin-right: 8px;
+.short-data-sheet .container .wrap-infos .info .evino-icons {
+  color: var(--primary);
+  font-size: 24px;
+  margin-right: 8px;
 }
- .short-data-sheet .container .wrap-infos .info .info-text .label {
-	 font-size: 14px;
-	 font-weight: 600;
-	 min-height: 24px;
-	 margin: 0px;
+.short-data-sheet .container .wrap-infos .info .info-text .label {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 24px;
+  margin: 0px;
 }
- .short-data-sheet .container .wrap-infos .info .info-text .value {
-	 display: -webkit-box;
-	 -webkit-line-clamp: 3;
-	 -webkit-box-orient: vertical;
-	 overflow: hidden;
-	 text-overflow: ellipsis;
-	 font-size: 12px;
-	 margin: 0;
+.short-data-sheet .container .wrap-infos .info .info-text .value {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin: 0;
 }
