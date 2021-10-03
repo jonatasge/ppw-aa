@@ -9,10 +9,10 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'ev-short-data-sheet',
   templateUrl: './short-data-sheet.component.html',
-  styleUrls: ['./short-data-sheet.component.scss'],
+  styleUrls: ['./short-data-sheet.component.css'],
 })
 export class ShortDataSheetComponent implements OnChanges {
-  @Input() data: IProduct;
+  @Input() data: IProduct | any;
   private sizes = ['extralarge', 'large', 'medium', 'small'];
   images: IImageSlideshow[] = [];
   chips: {
@@ -54,7 +54,7 @@ export class ShortDataSheetComponent implements OnChanges {
   }
 
   handleChips(
-    data: IProduct
+    data: IProduct | any
   ): {
     icon?: string;
     img?: string;
@@ -86,7 +86,7 @@ export class ShortDataSheetComponent implements OnChanges {
     return getBiggerImage(item, sizes);
   }
 
-  getWineColor(type: string): string {
+  getWineColor(type: string | any): string {
     return wineColor(type);
   }
 
@@ -94,7 +94,7 @@ export class ShortDataSheetComponent implements OnChanges {
     return wineIcon(type);
   }
 
-  handleIcon(name: string): any {
+  handleIcon(name: string | any): any {
     return { [getEvinoIconClass(name)]: true };
   }
 

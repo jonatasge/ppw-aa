@@ -12,7 +12,7 @@
   >
     <div class="wrap-content">
       <div class="wrap-thumbnail">
-        <img class="thumbnail" [src]="item.images.medium" alt="Imagem" />
+        <img class="thumbnail" [src]="item.images?.medium" alt="Imagem" />
       </div>
       <h1 class="name">{{ item.name }}</h1>
       <p class="type">{{ item.producer?.country }} - {{ item.type }}</p>

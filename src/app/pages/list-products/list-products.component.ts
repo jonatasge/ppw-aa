@@ -7,10 +7,10 @@ import { EventEmitterService } from 'src/common/services';
 @Component({
   selector: 'ev-list-products',
   templateUrl: './list-products.component.html',
-  styleUrls: ['./list-products.component.scss'],
+  styleUrls: ['./list-products.component.css'],
 })
 export class ListProductsComponent implements OnInit {
-  private meta: IMeta;
+  private meta: IMeta | any;
   list: IProduct[] = [];
 
   constructor(private service: ProductService) {}

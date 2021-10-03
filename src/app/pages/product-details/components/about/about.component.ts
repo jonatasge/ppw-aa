@@ -6,10 +6,10 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'ev-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnChanges {
-  @Input() sommelier: ISommelier;
+  @Input() sommelier: ISommelier | any;
   imageUrl =
     environment.assets.image +
     '/dpr_auto,w_770,c_scale,f_auto,q_auto/v1/web/assets';
@@ -42,14 +42,14 @@ export class AboutComponent implements OnChanges {
     ];
   }
 
-  getHQPicture(url: string): string {
+  getHQPicture(url: string): string | void {
     if (url) {
       const parts = url.split('/');
       return this.sommelierUrl + parts[parts.length - 1];
     }
   }
 
-  handleIcon(name: string): any {
+  handleIcon(name: string | any): any {
     return { [getEvinoIconClass(name)]: true };
   }
 }

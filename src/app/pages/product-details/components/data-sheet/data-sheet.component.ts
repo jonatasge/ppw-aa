@@ -8,10 +8,10 @@ import { getEvinoIconClass } from 'src/app/helpers';
 @Component({
   selector: 'ev-data-sheet',
   templateUrl: './data-sheet.component.html',
-  styleUrls: ['./data-sheet.component.scss'],
+  styleUrls: ['./data-sheet.component.css'],
 })
 export class DataSheetComponent implements OnChanges {
-  @Input() data: IProduct;
+  @Input() data: IProduct | any;
   colors = theme;
   notes: {
     label: string;
@@ -36,12 +36,12 @@ export class DataSheetComponent implements OnChanges {
   }
 
   handleNotes(
-    datasheet: IDatasheet
+    datasheet: IDatasheet | any
   ): {
     label: string;
     note: IBarNote;
   }[] {
-    const formatNote = (value: string = '0'): IBarNote => ({
+    const formatNote = (value: string | any = '0'): IBarNote => ({
       value: parseInt(value || '0', 10),
       of: 5,
     });
@@ -71,7 +71,7 @@ export class DataSheetComponent implements OnChanges {
   ): {
     icon: string;
     label: string;
-    value: string | number;
+    value: string | number | any;
   }[] {
     return [
       { icon: 'glass', label: 'Tipo de vinho', value: data?.type },
@@ -111,7 +111,7 @@ export class DataSheetComponent implements OnChanges {
     ];
   }
 
-  handleIcon(name: string): any {
+  handleIcon(name: string | any): any {
     return { [getEvinoIconClass(name)]: true };
   }
 }

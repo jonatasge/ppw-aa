@@ -6,7 +6,7 @@ import { EventEmitterService } from 'src/common/services';
 @Component({
   selector: 'ev-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss'],
+  styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];

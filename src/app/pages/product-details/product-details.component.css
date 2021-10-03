@@ -1,0 +1,68 @@
+@import "../../styles/theme.css";
+ #productDetails {
+	 align-items: center;
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+	 margin-bottom: 42px;
+}
+ #productDetails .gallery, #productDetails .wrap-info {
+	 width: calc(50% - 20px);
+}
+ @media (max-width: 1023px) {
+	 #productDetails .gallery, #productDetails .wrap-info {
+		 width: 100%;
+	}
+}
+ #productDetails .wrap-info .name {
+	 font-weight: 100;
+	 font-size: 36px;
+}
+ @media (max-width: 1023px) {
+	 #productDetails .wrap-info .name {
+		 font-size: 22px;
+	}
+}
+ #productDetails .wrap-info .wrap-chips {
+	 display: flex;
+}
+ #productDetails .wrap-info .wrap-chips .chip {
+	 align-items: center;
+	 background-color: #f0f0f0;
+	 border-radius: 25px;
+	 cursor: pointer;
+	 display: flex;
+	 font-size: 14px;
+	 font-weight: 100;
+	 line-height: 24px;
+	 padding: 2px 12px;
+	 transition: all ease 0.5s;
+}
+ #productDetails .wrap-info .wrap-chips .chip + .chip {
+	 margin-left: 7px;
+}
+ #productDetails .wrap-info .wrap-chips .chip .material-icons, #productDetails .wrap-info .wrap-chips .chip .icon {
+	 font-size: 20px;
+	 height: 20px;
+	 margin-right: 3px;
+	 width: 20px;
+}
+ #productDetails .wrap-info .buy {
+	 background-color: var(--primary);
+	 border-radius: 25px;
+	 color: var(--primaryContrast);
+	 cursor: pointer;
+	 display: block;
+	 margin-top: 30px;
+	 padding: 7px;
+	 text-align: center;
+	 width: 100%;
+}
+ #productDetails .details {
+	 margin-top: 56px;
+	 width: 100%;
+}
+ #productDetails .details .short-details {
+	 display: block;
+	 margin-top: 56px;
+}

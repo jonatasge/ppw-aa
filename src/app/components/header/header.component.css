@@ -6,17 +6,16 @@ header {
   justify-content: center;
   padding: 15px;
   width: 100%;
-
-  img {
-    height: 60%;
-    width: auto;
-  }
-
-  @media (max-height: 599px) {
+}
+header img {
+  height: 60%;
+  width: auto;
+}
+@media (max-height: 599px) {
+  header {
     height: 60px;
-
-    img {
-      height: 110%;
-    }
-  }
+ }
+  header img {
+    height: 110%;
+ }
 }

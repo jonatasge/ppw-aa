@@ -1,0 +1,23 @@
+#notFound {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 30px);
+  justify-content: center;
+  position: absolute;
+  width: calc(100% - 30px);
+}
+#notFound .wrap-content {
+  text-align: center;
+}
+#notFound .wrap-content .figure {
+  max-width: 100%;
+}
+#notFound .wrap-content .message {
+  font-size: 22px;
+  font-weight: normal;
+}
+@media (max-width: 499px) {
+  #notFound .wrap-content .message {
+    font-size: 18px;
+ }
+}

@@ -24,7 +24,7 @@
         <ng-template #img>
           <img
             [src]="item?.img"
-            [style.padding]="item?.img.includes('.svg') && '3px'"
+            [style.padding]="item?.img?.includes('.svg') && '3px'"
             class="icon"
           />
         </ng-template>

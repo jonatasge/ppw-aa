@@ -6,7 +6,7 @@ import { IBarNote } from 'src/common/components';
 @Component({
   selector: 'ev-data-sheet',
   templateUrl: './data-sheet.component.html',
-  styleUrls: ['./data-sheet.component.scss'],
+  styleUrls: ['./data-sheet.component.css'],
 })
 export class DataSheetComponent implements OnChanges {
   @Input() data: IProduct;

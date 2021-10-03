@@ -1,0 +1,17 @@
+.bar-note {
+  display: flex;
+  justify-items: stretch;
+}
+.bar-note .note {
+  background-color: gray;
+  border-radius: 7px;
+  height: 7px;
+  margin: 5px;
+  width: 100%;
+}
+.bar-note .note:first-child {
+  margin-left: 0;
+}
+.bar-note .note:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,70 @@
+.data-sheet .wrap-notes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.data-sheet .wrap-notes .note {
+  padding: 10px;
+  width: 50%;
+}
+.data-sheet .wrap-notes .note .label {
+  font-size: 14px;
+}
+.data-sheet .wrap-infos {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 24px -10px 0;
+}
+.data-sheet .wrap-infos .info {
+  display: flex;
+  height: 100px;
+  padding: 10px;
+  width: 25%;
+}
+@media (max-width: 1023px) {
+  .data-sheet .wrap-infos .info {
+    width: 33%;
+  }
+}
+@media (max-width: 767px) {
+  .data-sheet .wrap-infos .info {
+    width: 50%;
+  }
+}
+@media (max-width: 599px) {
+  .data-sheet .wrap-infos .info {
+    height: auto;
+    width: 100%;
+  }
+}
+.data-sheet .wrap-infos .info .evino-icons {
+  color: var(--primary);
+  font-size: 24px;
+  margin-right: 8px;
+}
+.data-sheet .wrap-infos .info .info-text .label {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 24px;
+  margin: 0px;
+}
+.data-sheet .wrap-infos .info .info-text .value {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin: 0;
+}
+.data-sheet .wrap-premiations {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.data-sheet .wrap-premiations .premiation {
+  padding: 0 10px;
+}

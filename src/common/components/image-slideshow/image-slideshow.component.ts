@@ -5,7 +5,7 @@ import { IImageSlideshow } from './image-slideshow.interface';
 @Component({
   selector: 'ev-image-slideshow',
   templateUrl: './image-slideshow.component.html',
-  styleUrls: ['./image-slideshow.component.scss'],
+  styleUrls: ['./image-slideshow.component.css'],
 })
 export class ImageSlideshowComponent {
   @Input() height = '200px';

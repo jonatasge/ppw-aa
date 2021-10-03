@@ -142,8 +142,10 @@ const colors = {
   yellowgreen: '#9acd32',
 };
 
-export const colorNameToHex = (color: string): string => {
+export const colorNameToHex = (color: string): string | null => {
+  // @ts-ignore
   if (typeof colors[color.toLowerCase()] !== 'undefined') {
+    // @ts-ignore
     return colors[color.toLowerCase()];
   }
 
@@ -152,12 +154,14 @@ export const colorNameToHex = (color: string): string => {
 
 export const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
   let h = hex.includes('#') ? hex : colorNameToHex(hex);
+  // @ts-ignore
   h = h.replace(
     /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
     (x, r, g, b) => r + r + g + g + b + b
   );
 
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(h);
+  // @ts-ignore
   return result
     ? {
         r: parseInt(result[1], 16),

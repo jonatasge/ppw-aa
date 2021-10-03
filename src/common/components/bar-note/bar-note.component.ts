@@ -4,10 +4,10 @@ import { IBarNote } from './bar-note.interface';
 @Component({
   selector: 'ev-bar-note',
   templateUrl: './bar-note.component.html',
-  styleUrls: ['./bar-note.component.scss'],
+  styleUrls: ['./bar-note.component.css'],
 })
 export class BarNoteComponent {
-  @Input() note: IBarNote;
+  @Input() note: IBarNote | any;
   @Input() primaryColor = 'black';
   @Input() backgroundColor = '#f0f0f0';
 

@@ -1,19 +1,18 @@
-@import "src/app/styles/theme";
-
+@import "../../styles/theme.css";
 footer {
   align-items: center;
-  background-color: rgba($primary, 0.05);
+  background-color: var(--primaryLight);
   display: flex;
   font-size: 14px;
   height: 40px;
   justify-content: center;
   text-align: center;
-
-  p {
-    margin: 0;
-  }
-
-  @media (max-width: 767px) {
+}
+footer p {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  footer {
     font-size: 12px;
   }
 }

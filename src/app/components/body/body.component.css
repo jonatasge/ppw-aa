@@ -1,0 +1,50 @@
+@import "../../styles/theme.css";
+#body {
+  margin: auto;
+  max-width: 1200px;
+  min-height: calc(100vh - 160px);
+  padding: 15px;
+  position: relative;
+}
+@media (max-height: 599px) {
+  #body {
+    min-height: calc(100vh - 100px);
+  }
+}
+#body .wrap-loading {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 30px);
+  justify-content: center;
+  position: absolute;
+  width: calc(100% - 30px);
+}
+#body .wrap-loading .loading {
+  height: 70px;
+}
+#body .container {
+  align-items: center;
+  background-color: var(--background);
+  display: flex;
+  height: calc(100% - 30px);
+  justify-content: center;
+  position: absolute;
+  width: calc(100% - 30px);
+}
+#body .container .wrap-content {
+  text-align: center;
+}
+#body .container .wrap-content .figure {
+  color: #ff1d25;
+  display: block;
+  font-size: 20vh;
+}
+#body .container .wrap-content .message {
+  font-size: 22px;
+  font-weight: normal;
+}
+@media (max-width: 499px) {
+  #body .container .wrap-content .message {
+    font-size: 18px;
+  }
+}

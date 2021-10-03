@@ -1,0 +1,104 @@
+@import "../../styles/theme.css";
+ #about {
+	 margin: 42px 0;
+}
+ #about .wrap-evaluation {
+	 align-items: stretch;
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+}
+ #about .wrap-evaluation .picture, #about .wrap-evaluation .container {
+	 width: calc(50% - 20px);
+}
+ #about .wrap-evaluation .picture {
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 border-radius: 25px;
+	 min-height: 400px;
+	 width: 50%;
+}
+ @media (max-width: 767px) {
+	 #about .wrap-evaluation .picture {
+		 border: 10px solid #f2f2f2;
+		 border-radius: 100%;
+		 height: 128px;
+		 margin: auto;
+		 min-height: auto;
+		 width: 128px;
+	}
+}
+ #about .wrap-evaluation .container {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+}
+ @media (min-width: 768px) {
+	 #about .wrap-evaluation .container {
+		 padding: 25px;
+	}
+}
+ @media (min-width: 1024px) {
+	 #about .wrap-evaluation .container {
+		 padding: 25px 50px;
+	}
+}
+ @media (max-width: 767px) {
+	 #about .wrap-evaluation .container {
+		 width: 100%;
+	}
+}
+ #about .wrap-evaluation .container .sommelier .name {
+	 font-size: 22px;
+}
+ @media (max-width: 767px) {
+	 #about .wrap-evaluation .container .sommelier .name {
+		 text-align: center;
+	}
+}
+ #about .wrap-evaluation .container .sommelier .commentary {
+	 font-size: 12px;
+}
+ #about .wrap-infos {
+	 align-items: stretch;
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+	 margin: 56px 0 0;
+}
+ @media (max-width: 767px) {
+	 #about .wrap-infos {
+		 margin: 14px -10px 0;
+	}
+}
+ #about .wrap-infos .info {
+	 display: flex;
+	 padding: 10px;
+	 width: 33%;
+}
+ @media (max-width: 599px) {
+	 #about .wrap-infos .info {
+		 width: 100%;
+	}
+}
+ #about .wrap-infos .info .evino-icons {
+	 color: var(--primary);
+	 font-size: 24px;
+	 margin-right: 8px;
+}
+ #about .wrap-infos .info .info-text .label {
+	 font-size: 14px;
+	 font-weight: 600;
+	 min-height: 24px;
+	 margin: 0px;
+}
+ #about .wrap-infos .info .info-text .value {
+	 display: -webkit-box;
+	 -webkit-line-clamp: 3;
+	 -webkit-box-orient: vertical;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+	 font-size: 12px;
+	 margin: 0;
+}

@@ -1,6 +1,6 @@
 export const getBiggerImage = (
   item: any,
-  sizes: string[] = this.sizes
+  sizes: string[] = (this as any)?.sizes
 ): string => {
   return sizes
     .map((size: string) => (item[size] ? item[size] : 0))
@@ -9,7 +9,7 @@ export const getBiggerImage = (
 
 export const getSmallerImage = (
   item: any,
-  sizes: string[] = this.sizes
+  sizes: string[] = (this as any)?.sizes
 ): string => {
   return [...sizes]
     .reverse()

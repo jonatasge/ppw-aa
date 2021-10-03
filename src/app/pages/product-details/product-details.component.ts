@@ -12,14 +12,14 @@ import { EventEmitterService } from 'src/common/services';
 @Component({
   selector: 'ev-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss'],
+  styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
-  private id: string;
+  private id: string | any;
   colors = theme;
-  data: IProduct;
-  images: IImageSlideshow[];
+  data: IProduct | any;
+  images: IImageSlideshow[] | any;
 
   constructor(
     protected activatedRoute: ActivatedRoute,
@@ -52,7 +52,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
         EventEmitterService.get('loading').emit(false);
 
         this.data = response.data;
-        const images = response.data?.bundleProducts.map(
+        const images: any = (response.data as any)?.bundleProducts.map(
           (product: IProduct) => product.images
         );
         this.images = [response.data?.images, ...images];
