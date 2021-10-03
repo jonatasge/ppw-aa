@@ -1,0 +1,22 @@
+header {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  padding: 15px;
+  width: 100%;
+
+  img {
+    height: 60%;
+    width: auto;
+  }
+
+  @media (max-height: 599px) {
+    height: 60px;
+
+    img {
+      height: 110%;
+    }
+  }
+}
