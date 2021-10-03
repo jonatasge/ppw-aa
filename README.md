@@ -26,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # ppw-aa
+
+## Deploy
+Run `npm run deploy` to deploy the files in `dist/` folder.
+
+## Demo
+
+[https://jonatasgev.github.io/ppw-aa/](https://jonatasgev.github.io/ppw-aa/)
