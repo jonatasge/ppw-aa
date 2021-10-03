@@ -1,0 +1,24 @@
+<div
+  id="list"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+>
+  <div
+    *ngFor="let item of list"
+    class="item"
+    [routerLink]="'product/' + item.url"
+  >
+    <div class="wrap-content">
+      <div class="wrap-thumbnail">
+        <img class="thumbnail" [src]="item.images.medium" alt="Imagem" />
+      </div>
+      <h1 class="name">{{ item.name }}</h1>
+      <p class="type">{{ item.producer?.country }} - {{ item.type }}</p>
+      <span class="discount" *ngIf="item.discounts">
+        {{ item.discounts.sale }}% OFF
+      </span>
+    </div>
+  </div>
+</div>

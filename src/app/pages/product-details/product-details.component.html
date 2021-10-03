@@ -1,0 +1,43 @@
+<div id="productDetails">
+  <ev-image-slideshow
+    class="gallery"
+    [images]="images"
+    [primaryColor]="colors.primary"
+    [imageBackgroundColor]="colors.background"
+  ></ev-image-slideshow>
+
+  <div class="wrap-info">
+    <h1 class="name">{{ data?.name || "-" }}</h1>
+    <div class="wrap-chips">
+      <span class="chip">
+        <i class="material-icons" [style.color]="getWineColor(data?.type)">
+          {{ getWineIcon(data?.type) }}
+        </i>
+        {{ data?.type || "-" }}
+      </span>
+      <span class="chip">
+        <img class="icon" [src]="data?.countries[0]?.icon" />
+        {{ data?.countries[0]?.name || "-" }}
+      </span>
+    </div>
+
+    <a class="buy">Comprar</a>
+  </div>
+
+  <div class="details">
+    <ng-container *ngIf="!data?.isBundle; else bundle">
+      <ev-data-sheet [data]="data"></ev-data-sheet>
+      <ev-about [sommelier]="data?.sommelier"></ev-about>
+    </ng-container>
+
+    <ng-template #bundle>
+      <h1 class="section-title">Sobre o kit</h1>
+      <p>{{data?.aboutThisWine}}</p>
+      <ev-short-data-sheet
+        *ngFor="let item of data?.bundleProducts"
+        [data]="item"
+        class="short-details"
+      ></ev-short-data-sheet>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.data-sheet {
+  .wrap-notes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .note {
+      padding: 10px;
+      width: 50%;
+
+      .label {
+        font-size: 14px;
+      }
+    }
+  }
+}

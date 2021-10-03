@@ -1,0 +1,80 @@
+@import "src/app/styles/theme";
+
+#list {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .item {
+    background-color: $background;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 30px 15px;
+    transition: all ease 0.4s;
+    width: 30%;
+
+    &:hover {
+      background-color: rgba($primary, 0.05);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+
+    @media (max-width: 499px) {
+      width: 100%;
+    }
+
+    .wrap-content {
+      margin: auto;
+      width: 60%;
+
+      @media (max-width: 767px) {
+        width: 80%;
+      }
+
+      @media (max-width: 499px) {
+        width: 100%;
+      }
+
+      .wrap-thumbnail {
+        align-items: center;
+        display: flex;
+        height: 20vh;
+        justify-content: center;
+        min-height: 140px;
+
+        .thumbnail {
+          height: auto;
+          max-height: 100%;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      .name {
+        font-size: 17px;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      .type {
+        color: #aaaaaa;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .discount {
+        background-color: $primary;
+        border-radius: 5px;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 5px;
+      }
+    }
+  }
+}

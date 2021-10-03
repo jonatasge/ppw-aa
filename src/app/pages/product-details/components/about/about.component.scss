@@ -1,0 +1,114 @@
+@import "src/app/styles/theme";
+
+#about {
+  margin: 42px 0;
+
+  .wrap-evaluation {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .picture,
+    .container {
+      width: calc(50% - 20px);
+    }
+
+    .picture {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 25px;
+      min-height: 400px;
+      width: 50%;
+
+      @media (max-width: 767px) {
+        border: 10px solid #f2f2f2;
+        border-radius: 100%;
+        height: 128px;
+        margin: auto;
+        min-height: auto;
+        width: 128px;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        padding: 25px;
+      }
+
+      @media (min-width: 1024px) {
+        padding: 25px 50px;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      .sommelier {
+        .name {
+          font-size: 22px;
+
+          @media (max-width: 767px) {
+            text-align: center;
+          }
+        }
+
+        .commentary {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .wrap-infos {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 56px 0 0;
+
+    @media (max-width: 767px) {
+      margin: 14px -10px 0;
+    }
+
+    .info {
+      display: flex;
+      padding: 10px;
+      width: 33%;
+
+      @media (max-width: 599px) {
+        width: 100%;
+      }
+
+      .evino-icons {
+        color: $primary;
+        font-size: 24px;
+        margin-right: 8px;
+      }
+
+      .info-text {
+        .label {
+          font-size: 14px;
+          font-weight: 600;
+          min-height: 24px;
+          margin: 0px;
+        }
+
+        .value {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

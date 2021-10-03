@@ -1,0 +1,45 @@
+<div class="short-data-sheet">
+  <div class="picture">
+    <ev-image-slideshow
+      [height]="'255px'"
+      [imageBackgroundColor]="colors.background"
+      [images]="images"
+      [primaryColor]="colors.primary"
+      [showThumbnails]="false"
+      class="gallery"
+    ></ev-image-slideshow>
+  </div>
+
+  <div class="container">
+    <h1 class="name">{{ data?.name || "-" }}</h1>
+
+    <div class="wrap-chips">
+      <span *ngFor="let item of chips" class="chip">
+        <i
+          *ngIf="item?.icon; else img"
+          class="evino-icons"
+          [ngClass]="handleIcon(item.icon)"
+          [style.color]="getWineColor(item?.type)"
+        ></i>
+        <ng-template #img>
+          <img
+            [src]="item?.img"
+            [style.padding]="item?.img.includes('.svg') && '3px'"
+            class="icon"
+          />
+        </ng-template>
+        {{ item?.text || "-" }}
+      </span>
+    </div>
+
+    <div *ngIf="typeIsDrink(data?.type)" class="wrap-infos">
+      <div *ngFor="let item of infos" class="info">
+        <i class="evino-icons" [ngClass]="handleIcon(item?.icon)"></i>
+        <div class="info-text">
+          <h1 class="label">{{ item?.label || "-" }}</h1>
+          <p class="value">{{ item?.value || "-" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

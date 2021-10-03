@@ -1,0 +1,82 @@
+@import "src/app/styles/theme";
+
+.data-sheet {
+  .wrap-notes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .note {
+      padding: 10px;
+      width: 50%;
+
+      .label {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .wrap-infos {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 24px -10px 0;
+
+    .info {
+      display: flex;
+      height: 100px;
+      padding: 10px;
+      width: 25%;
+
+      @media (max-width: 1023px) {
+        width: 33%;
+      }
+
+      @media (max-width: 767px) {
+        width: 50%;
+      }
+
+      @media (max-width: 599px) {
+        height: auto;
+        width: 100%;
+      }
+
+      .evino-icons {
+        color: $primary;
+        font-size: 24px;
+        margin-right: 8px;
+      }
+
+      .info-text {
+        .label {
+          font-size: 14px;
+          font-weight: 600;
+          min-height: 24px;
+          margin: 0px;
+        }
+
+        .value {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .wrap-premiations {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .premiation {
+      padding: 0 10px;
+    }
+  }
+}
